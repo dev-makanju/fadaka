@@ -1,8 +1,31 @@
-$primary-color: red;
-$secondary-color: green;
+@import "https://laravel.om";
+@import "https://laravel.om";
+
+$primary-color: rgb(77, 8, 8);
+$secondary-color: rgb(92, 32, 32);
+$black: #000; 
+
+h1 , h2 , h3 , h4 , h5 , h6{
+    color: #fff;
+    font-family: 'raleways';
+}
 
 
+*{
+    margin: 0px;
+    padding: 0px;
+}
 
+ol , ul  , li , a{
+    list-style-type: none;
+    color: #000;
+    font-family: 'raleways';
+    text-decoration: none;
+} 
+
+@mixin font-style {
+    font-family: 'raleways' sans-serif;
+}
 
 @mixin transition-ease {
     transition: 0.5s all;
@@ -10,12 +33,18 @@ $secondary-color: green;
 
 @mixin desktop-md {
      @media screen and (max-width:1200px){
-          background: red;
+        
      }
 }
 
 @mixin tablet-xd {
+    @media screen and (max-width:1024px){
+        
+    }
+}
+
+@mixin tablet-xl {
     @media screen and (max-width:768px){
-        background: red;
+        
     }
 }

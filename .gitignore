@@ -1,5 +1,6 @@
 /node_modules
 /public/hot
+/resourses/sass
 /public/storage
 /storage/*.key
 /vendor

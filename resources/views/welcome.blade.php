@@ -10,14 +10,35 @@
 </head>
 <body>
     @section('content')
-      <div class="landing__page">
-          <div class="landing__page__wrapper">
-                <a href="">Get started</a>
-          </div>
-      </div>
-      <h2>Fadaka</h2>
-      <h4>Your Personal Finance App</h4>
-      <h6>easy banking...</h6>
+        <div class="container">
+            <div class="container__background">
+                <ul class="box-area">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+            <div class="container__wrapper__content">
+               <div class="landing__page">
+                   <h2>Fadaka</h2>
+                   <h4>Your Personal Finance App</h4>
+                   <h6>easy banking...</h6>
+               </div>
+
+               <div class="landing__page">
+                    <div class="link__landing__page">
+                        <div class="link__landing__page__wrapper">
+                            <a href="#">Sign up</a>
+                        </div>
+                        <div class="link__landing__page__wrapper">
+                            <a href="#">Sign in</a>
+                        </div>
+                    </div>
+               </div>
+             </div>
+        </div>
      @endsection 
 </body>
 </html>
