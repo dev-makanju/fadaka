@@ -1,9 +1,27 @@
-@import "https://laravel.om";
-@import "https://laravel.om";
+@import url("https://fonts.googleapis.com/css2?family=Arvo&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Arvo&family=Old+Standard+TT&display=swap");
 
 $primary-color: rgb(77, 8, 8);
 $secondary-color: rgb(92, 32, 32);
-$black: #000; 
+$black: #000 ; 
+$white: #fff ;
+$most_used: green ;
+$background:  rgb(205, 231, 205);
+$light_green: rgb(15, 221, 15);
+
+.error{
+    color: #e74e3c;
+}
+ 
+@mixin fonts-small{
+    font-family: 'Arvo', serif;
+}
+
+
+@mixin fonts_bg {
+    font-family: 'Old Standard TT', serif;
+}
+
 
 h1 , h2 , h3 , h4 , h5 , h6{
     color: #fff;
@@ -23,12 +41,44 @@ ol , ul  , li , a{
     text-decoration: none;
 } 
 
+table{
+    box-shadow: 0px 2px 5px rgba(0 , 0 , 0 , .3);
+    border-collapse: collapse;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    width: fit-content;
+}
+
+th{
+    padding: 6px 40px;
+    border: 1px solid #eee;
+}
+
+td{
+    padding: 6px 40px;
+    border: 1px solid #eee;
+}
+
+th:first-child{
+    width: 5px;
+}
+
+td:nth-child(even){
+    background:  #eee;
+}
+
+td:first-child{
+    width: 5px;
+}
+
+
+
 @mixin font-style {
     font-family: 'raleways' sans-serif;
 }
 
 @mixin transition-ease {
-    transition: 0.5s all;
+    transition: 0.5s all ease-in-out;
 }
 
 @mixin desktop-md {
@@ -45,6 +95,22 @@ ol , ul  , li , a{
 
 @mixin tablet-xl {
     @media screen and (max-width:768px){
-        
+        .Auth_container{
+            width: 80vw;
+            & h2{
+                font-size: 1rem;
+            }
+        }
+    }
+}
+
+@mixin tablet-xm {
+    @media screen and (max-width:450px){
+        .Auth_container{
+            width: 90vw;
+            & h2{
+                font-size: 1rem;
+            }
+        }
     }
 }

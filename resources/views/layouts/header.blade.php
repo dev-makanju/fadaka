@@ -1,31 +1,54 @@
 <header>
-        <div class="menu-nav">
-             <h1>Fadaka</h1>
+    <div class="header-wrapper">
+        <div class="menu-btn">
+            <div class="menu-btn__logo">
+                <h2>Fadaka</h2>
+            </div>
+            <span class="menu-btn__burger"></span>
         </div>
-        <div class="menu-nav__parent">
-            <ul class="menu-nav__items">
-                <li><a href="#">Contact Us</a></li>
-                <li><a href="#">Inbox</a></li>
-                <li><a href="#">Faq</a></li>
-                <li><a href="#">About</a></li>
+        <div class="menu-btn">
+            <ul class="menu-nav">
+                <li class="menu-nav__items">
+                    <a href="/contact"  class="menu-nav__link"> <span style="color:green;"><i class="fa fa-address-book"></i></span>&nbspContact Us</a>
+                </li>
+                <li class="menu-nav__items">
+                   <a href="/faq" class="menu-nav__link"><span style="color:green;"><i class="fa fa-bell-concierge"></i></span>&nbspFaq</a>
+                </li>
+                <li class="menu-nav__items">
+                    <a href="/about" class="menu-nav__link"><span style="color: green;"><i class="fa fa-address-card"></i></span>&nbspAbout</a>
+                </li>
             </ul>
 
-            <hr>
-            <div class="social">
-                 <ul class="social__icons">
-                    <li>
-                         <span><i class="">M</i></span>
-                    </li>
-                    <li>
-                        <span><i class="">N</i></span>
-                    </li>
-                    <li>
-                        <span><i class="">O</i></span>
-                    </li>
-                    <li>
-                        <span><i class="">P</i></span>
-                    </li>
+            <div class="menu-nav">
+                 <ul class="menu-nav__services">
+                        <li>
+                           <a href="">
+                            <div class="menu-nav__services__box">
+                                <div class="menu-nav__services__wrapper">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <div class="menu-nav__services__wrapper">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <div class="menu-nav__services__wrapper">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                            </div>    
+                           </a>
+                        </li>
+                        <li> 
+                            <a href="">
+                                <img src="" alt="">iwill
+                            </a>
+                        </li>
                  </ul>
             </div>
         </div>
+    </div><!--end of header wrappers-->    
 </header>

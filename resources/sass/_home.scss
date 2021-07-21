@@ -1,0 +1,246 @@
+section{
+    height: 100%;
+    display: flex;
+    box-sizing: border-box ;
+    background: $background ;
+}
+
+#left{
+    flex-shrink: 0;
+    flex: .7;
+    background: $white;
+    display: flex;
+    flex-direction: column;
+}
+
+#right{
+    flex-grow: 1;
+    flex: 3;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0 , 0 , 0 , .3);
+    padding: 20px;
+    margin: 25px;
+    background: #fff;
+}
+
+.main-content__wrapper{
+    display: flex;
+    flex-direction:column;
+}
+
+.main-content__box{
+    flex-grow: 1;
+    border-radius: 5px;
+    margin: 4px;
+    position: relative;
+
+    &__text-display{
+        position: absolute;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        height: 250px;
+        justify-content:center;
+        align-items: center;
+
+        & > div > h2{
+            color: #000;
+            font-size: 40px;
+            @include fonts-small;
+        }
+    } 
+
+    &__overlay{
+        background:linear-gradient(to left , #fff , rgb(28, 66, 28));
+        height:250px;
+        border-radius: 5px;
+        opacity: .7;
+    }
+
+    &__wraps{
+        flex-grow: 1;
+        padding: 5px;
+        margin: 5px;
+        box-shadow: 0px 2px 5px rgba(0 , 0 , 0 , .3);
+
+        & .transfer  h1{
+            padding: 17px;
+            @include fonts_bg;
+        }
+
+        & .transfer button{
+            padding: 8px;
+            border-radius: 4px;
+            outline: none;
+            border: none;
+            font-size: 20px;
+        }
+
+        & .transfer p{
+            @include fonts_bg;
+        }
+
+        & .transfer > form > .secure__transfer{
+            & > input{
+                box-sizing: border-box;
+                padding: 8px;
+                font-size: 18px;
+                outline: none;
+                border-radius: 5px;
+                border: 1px solid green;
+            }
+
+            & > select{
+                padding: 8px;
+                outline: none;
+
+                &:hover{
+                    background: #eee;
+                    @include transition-ease;
+                }
+            }
+
+            & option{
+                background: $light_green;
+                &:hover{
+                    background: #eee;
+                    @include transition-ease;
+                }
+            }
+        }
+    }
+
+    &__wrapper{
+        display: flex;
+    }
+}
+
+.converter{
+    width: 150px;
+}
+
+.dashboard__display{
+    top: 0;
+    position: absolute;
+    right: 0;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.main-search form{
+      display: flex;   
+
+      & > .search-bar{
+          position: relative;
+          width: fit-content;
+          margin: 5px;
+
+          & > input{
+            box-sizing: border-box;
+            padding: 8px;
+            font-size: 18px;
+            outline: none;
+            border-radius: 5px;
+            border: 1px solid green;
+          }
+
+          & i{
+              position: absolute;
+              right: 0px;
+              top: 0px;
+              padding: 8px;
+              font-size:20px
+          }
+
+          & select{
+              position: absolute;
+              right: 0px;
+              top: 0px;
+              padding: 6px;
+              font-size: 20px;
+          }
+      }
+}
+
+.side-navbar{
+    padding: 10px;
+    & > img{
+        border-radius: 50%;
+        border:1px solid #000;
+        background: $light_green;
+        float: left;
+        width: 45px;
+        height: 45px;
+        
+    }
+    & > p{
+        display: flex;
+        height: 45px;
+        justify-content: center ;
+        align-items: center;
+        font-weight: bold;
+        @include fonts_bg;
+    }
+
+    &__balance{
+        display: flex;
+        justify-content: space-between  ;
+        align-items: center;
+        height: 20px;
+
+        & > li{
+            background: $light_green ;
+            border-radius:4px;
+            font-weight: bold;
+            @include fonts_bg;
+        }
+        & > p{
+            font-weight: bold;
+        }
+    }
+}
+
+.secure__transfer{
+     position: relative;
+     width: fit-content;
+     float: left;
+     & img{
+         position: absolute;
+         right: 0px;
+         top: 0px;
+         width: 35px;
+     }
+}
+
+.cash{
+    font-size: 40px;
+    color: $light_green;
+}
+
+.sidebar li a{
+    display: block;
+    padding: 25px 35px;
+    @include fonts_bg;
+
+    & i{
+        padding-right: 5px;
+    }
+
+    &:hover{
+        background: #eee;
+        @include transition-ease;
+    }
+}
+
+.trow-exception{
+    background: #e74e3c;
+    color: #fff;
+    padding: 15px 20px;
+    border-radius: 4px;
+
+
+}
+
+.active{
+    background: #eee;
+}

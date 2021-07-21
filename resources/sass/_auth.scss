@@ -1,0 +1,75 @@
+.Auth_container{
+    width: 40vw;
+
+    margin: 2rem auto;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(3 , 3 , 3 , 3);
+    overflow: hidden;
+
+    & h2{
+        color: #000;
+        background: $background ;
+        padding: 30px 40px;
+        font-size: 2rem;
+    }
+}
+
+form{
+    padding: 20px;
+}
+
+.form-Control{
+
+    & label{
+        font-size: 20px;
+        @include fonts-small;
+        display: block;
+    }
+
+    & input{
+        width: 100%;
+        box-sizing: border-box;
+        padding:10px;
+        @include fonts-small;
+        border: 1px solid $background ;
+        border-radius: 4px;
+        font-size: 18px;
+        margin-bottom: 10px;
+        outline: $background ;
+    }
+
+    & textarea{
+        width: 100%;
+        border-radius: 5px;
+        padding: 5px;
+        font-size: 18px;
+        box-sizing: border-box;
+        outline: background ;
+        border: 1px solid $background ;
+        @include fonts-small;
+    }
+}
+
+.btn{
+    width: 100%;
+    padding:10px;
+    font-size: 18px;
+    border: 1px solid rgb(164, 226, 164);
+    border-radius: 5px;
+    color: $most_used ;
+    @include fonts_bg;
+}
+
+.Auth__link{
+    padding-bottom: 25px;
+
+    &-wrapper{
+        padding: 4px;
+
+        & p a{
+            color: green;
+            @include fonts-small;
+        }
+    }
+
+}
