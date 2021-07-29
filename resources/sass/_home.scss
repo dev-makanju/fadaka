@@ -9,23 +9,186 @@ section{
     flex-shrink: 0;
     flex: .7;
     background: $white;
-    display: flex;
+    display: flex ;
     flex-direction: column;
 }
 
-#right{
-    flex-grow: 1;
-    flex: 3;
-    border-radius: 10px;
-    box-shadow: 0px 2px 5px rgba(0 , 0 , 0 , .3);
-    padding: 20px;
-    margin: 25px;
+
+.message__dashboard{
     background: #fff;
+    border-radius: 4px;
+    height: 150px;
+    width: 150px;
+    box-shadow: 0px 2px 5px rgba(0 , 0 , 0 , .3);
+    display: flex ;
+    justify-content: center ;
+    align-items: center;
+
 }
 
-.main-content__wrapper{
+.message_content_dash{
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    box-shadow: 0px 2px 5px rgba(0 , 0 , 0 , .2);
+
+    & p{
+        font-weight: bold;
+        text-align: center;
+        font-size: 18px;
+        @include fonts-small;
+    }
+}
+
+
+#right{
+   flex:3;
+   height: 100%;
+}
+
+#pages_right{
+   flex:3;
+   height: 100vh;
+}
+
+.top-dash__box{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #eee;
+    box-shadow: 0px 2px 5px rgba(0 , 0 , 0 , 3);
+    position: absolute;
+    transform: translateY(-20px);
+    right: 0px;
+
+    &:hover .main_dashboard > a {
+         transform: translateY(40px) ;     
+    }
+}
+
+.top-box{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #eee;
+    box-shadow: 0px 2px 5px rgba(0 , 0 , 0 , 3);
+    transform: translateY(-20px);
+    float: right;
+}
+
+.message{
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0 , 0 , 0 , .3);
+    position: relative;
+    background: #fff;
+
+    &_content{
+       padding: 20px 30px;
+
+       & form .form-group{
+           height: 70px;
+
+           & .split__form{
+               display: inline-flex;
+           }
+       }
+        
+       & form .form-group input{
+           padding: 8px;
+           outline: none;
+           border: 1px solid #eee;
+           width: 100%;
+           box-sizing: border-box;
+           margin: 4px;
+           border-radius: 4px;
+       }
+    }
+
+    &__wrapper{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        background: #eee;
+        padding: 20px 30px;
+    }
+}
+
+
+.main_dashboard{
     display: flex;
-    flex-direction:column;
+    flex-direction: row;
+    padding: 10px;
+    flex-wrap: wrap;
+
+    & a{
+        position: relative;
+        margin: 20px;
+        transition: transforms ;
+    }
+}
+
+.pages__main-content{
+   width: 50%;
+   margin: 10px auto ;
+
+   &__profile{
+       margin: 30px auto;
+       width: 80%;
+       background: #fff ;
+       display: flex;
+       flex-direction: row;
+       border-radius: 5px;
+
+       &__split{
+           width: 100%;    
+           border-right: 1px solid #eee;
+
+            & img{
+               width: 300px;
+               height: 300px;
+               border-radius: 50%;
+           }
+       } 
+
+       &__split p{
+           padding: 10px 20px;
+           border-bottom: 1px solid #eee;
+       }
+    }
+   & h1{
+       padding: 30px 5px;
+   }
+}
+
+.main-content__box__text-display{
+    width: 70%;
+    &:hover > div{
+        animation-play-state: paused;
+    }
+
+    & > div{
+        position: absolute;
+        transform: translateX(-800px);
+        animation: left-to-right 5s cubic-bezier(0.75, 0.4, 0.2, 0.76) infinite alternate 4s;
+        cursor: pointer;
+    }
+
+    @for  $i from 1 through 3{
+        & > div:nth-child(#{$i}){
+            animation-delay: $i * 5s;
+        }
+     
+    }
+}
+
+
+@keyframes left-to-right {
+    100%{
+        transform: translateX(0);
+    }
 }
 
 .main-content__box{
@@ -33,6 +196,7 @@ section{
     border-radius: 5px;
     margin: 4px;
     position: relative;
+    overflow: hidden;
 
     &__text-display{
         position: absolute;
@@ -51,7 +215,7 @@ section{
     } 
 
     &__overlay{
-        background:linear-gradient(to left , #fff , rgb(28, 66, 28));
+        background:url('/media/wallet.jpg');
         height:250px;
         border-radius: 5px;
         opacity: .7;
@@ -219,7 +383,7 @@ section{
 
 .sidebar li a{
     display: block;
-    padding: 25px 35px;
+    padding: 20px 20px;
     @include fonts_bg;
 
     & i{

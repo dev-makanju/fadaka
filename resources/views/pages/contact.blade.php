@@ -22,7 +22,7 @@
                 <label for="Email">Email:</label>
                 <input type="text" name="email" id="Email" placeholder="Fadaka_example@gmail.com">
            </div>
-           <div class="form-Control">
+           <div class="form-Control-height">
                <label for="pass_conf">How can we help you?</label>
                <textarea name="" id="" cols="30" rows="10"></textarea>
            </div>

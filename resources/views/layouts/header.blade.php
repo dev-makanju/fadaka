@@ -9,13 +9,13 @@
         <div class="menu-btn">
             <ul class="menu-nav">
                 <li class="menu-nav__items">
-                    <a href="/contact"  class="menu-nav__link"> <span style="color:green;"><i class="fa fa-address-book"></i></span>&nbspContact Us</a>
+                    <a href="{{ route('pages.contact') }}"  class="menu-nav__link"> <span style="color:green;"><i class="fa fa-address-book"></i></span>&nbspContact Us</a>
                 </li>
                 <li class="menu-nav__items">
-                   <a href="/faq" class="menu-nav__link"><span style="color:green;"><i class="fa fa-bell-concierge"></i></span>&nbspFaq</a>
+                   <a href="{{ route('pages.faq') }}" class="menu-nav__link"><span style="color:green;"><i class="fa fa-bell-concierge"></i></span>&nbspFaq</a>
                 </li>
                 <li class="menu-nav__items">
-                    <a href="/about" class="menu-nav__link"><span style="color: green;"><i class="fa fa-address-card"></i></span>&nbspAbout</a>
+                    <a href="{{ route('pages.about') }}" class="menu-nav__link"><span style="color: green;"><i class="fa fa-address-card"></i></span>&nbspAbout</a>
                 </li>
             </ul>
 
@@ -43,9 +43,11 @@
                            </a>
                         </li>
                         <li> 
-                            <a href="">
-                                <img src="" alt="">iwill
+                            @if(session()->has('LoggedUser'))
+                            <a class="logout" href="{{ route('auth.logout') }}">
+                                logout
                             </a>
+                            @endif
                         </li>
                  </ul>
             </div>

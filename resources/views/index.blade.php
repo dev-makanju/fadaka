@@ -21,10 +21,10 @@
                <div class="landing__page">
                     <div class="link__landing__page">
                         <div class="link__landing__page__wrapper">
-                            <a href="/login">Sign up</a>
+                            <a href="{{ route('Auth.register') }}">Sign up</a>
                         </div>
                         <div class="link__landing__page__wrapper">
-                            <a href="/register">Sign in</a>
+                            <a href="{{ route('Auth.login') }}">Sign in</a>
                         </div>
                     </div>
                </div>

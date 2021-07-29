@@ -1,56 +1,15 @@
 @extends('layouts.app')
 @section('title','Home')
 @section('content')
-<section>
-     <div id="left" class="column">
-          <div class="side-navbar">
-               <img src="media\smallprofile.jpg.png" alt="user-icon">
-               <p>hi, Makanju</p>
-          </div>
-          <div class="side-navbar">
-              <div class="side-navbar__balance">
-                   <li>Wallet bal:</li> <p><span class="cash">&pound</span>7000.00</p>
-              </div>
-          </div>
-          <ul class="sidebar">
-               <li>
-                    <a href="#" class="active">
-                         <i class>M</i>
-                         Dashboard
-                    </a>
-               <li>
-                    <a href="#">
-                         <i class>M</i>
-                         Mail
-                    </a>
-               </li>
-               <li>
-                    <a href="#">
-                         <i class>M</i>
-                         Message
-                    </a>
-               </li>
-               <li>
-                    <a href="#">
-                         <i class>M</i>
-                         Profile
-                    </a>
-               </li>
-               <li>
-                    <a href="#">
-                         <i class>M</i>
-                         Fund wallet
-                    </a>
-               </li>
-          </ul>
-     </div>
+<section>     
+     @include('layouts.sidenav')
      <div id="right" class="column"">
           <h1 style="color:#000;">Dashboard</h1>
          <div class="main-content">
                <div class="main-content__wrapper">
                     <div class="main-content__box">
-                         <div class="main-content__box__overlay"></div>
-                         <img class="dashboard__display" height="250" src="media/IMG.PIC.JPG" alt="">
+                         <div class="main-content__box__overlay">
+                         <img class="dashboard__display" height="250" alt="">
                           <div class="main-content__box__text-display">
                               <div>
                                  <h2>
@@ -68,44 +27,81 @@
                                    </h2>
                               </div>
                           </div>
+                              
+                         </div>
                     </div>
                     <div class="main-content__box">
-                         <div class="main-content__box__wrapper">
-                              <div class="main-content__box__wraps">
-                                   <div class="transfer">
-                                        <h1 style="color:#000;">Quick Transfer</h1>
-                                        <form action="">
-                                             <div class="secure__transfer">
-                                                  <input type="text" placeholder="1234 1234 1234 1234">
-                                                  <img src="" class="icon" alt="icon">
-                                             </div>
-                                             <button><i class="fa fa-search"></i></button>
-                                        </form>
-                                   </div>
-                              </div>
-                              <div class="main-content__box__wraps">
-                                   <div class="transfer">
-                                   <h1 style="color:#000;">Conversion</h1>
-                                   <form action="">
-                                        <div class="secure__transfer">
-                                             <input type="text" class="converter" placeholder="&pound000.00">
-                                             <select name="" id="">
-                                                  <option value="">USD</option>
-                                                  <option value="">NGN</option>
-                                                  <option value="">CUD</option>
-                                             </select>
-                                             <input type="" class="converter" placeholder="convert to">
-                                             <select name="" id="">
-                                                  <option value="">USD</option>
-                                                  <option value="">NGN</option>
-                                                  <option value="">CUD</option>
-                                             </select>
-                                        </div>
-                                        <p ><span>Rate</span>500/USD...</p>
-                                   </form>
-                                   </div>
-                              </div>
-                         </div>
+                         <div class="main_dashboard">
+                                   <a href="">    
+                                        <div class="top-dash__box"></div>
+                                        <div class="message__dashboard">
+                                            <div class="message_content_dash">
+                                                <p>Quick Transfer</p>
+                                            </div>
+                                        </div><!--end of message-->
+                                   </a>
+                                   <a href="">    
+                                        <div class="top-dash__box"></div>
+                                        <div class="message__dashboard">
+                                            <div class="message_content_dash">
+                                                <p>Purchase Data</p>
+                                            </div>
+                                        </div><!--end of message-->
+                                   </a>
+                                   <a href="">    
+                                        <div class="top-dash__box"></div>
+                                        <div class="message__dashboard">
+                                            <div class="message_content_dash">
+                                                <p>Tv Subscription</p>
+                                            </div>
+                                        </div><!--end of message-->
+                                   </a>
+                         
+                                  <a href="">   
+                                   <div class="top-dash__box"></div>  
+                                   <div class="message__dashboard">
+                                       <div class="message_content_dash">
+                                           <p>Airtime Topup</p>
+                                       </div>
+                                   </div><!--end of message-->
+                                   </a>
+
+                                   <a href="">    
+                                   <div class="top-dash__box"></div>
+                                   <div class="message__dashboard">
+                                       <div class="message_content_dash">
+                                           <p>Currency Converter</p>
+                                       </div>
+                                   </div><!--end of message-->
+                                   </a>
+
+                                   <a href="">    
+                                   <div class="top-dash__box"></div>
+                                   <div class="message__dashboard">
+                                       <div class="message_content_dash">
+                                           <p>Withdraw</p>
+                                       </div>
+                                   </div><!--end of message-->
+                                   </a>
+
+                                   <a href="">    
+                                        <div class="top-dash__box"></div>
+                                        <div class="message__dashboard">
+                                            <div class="message_content_dash">
+                                                <p>Buy Bitcoin</p>
+                                            </div>
+                                        </div><!--end of message-->
+                                   </a>
+
+                                   <a href="">    
+                                        <div class="top-dash__box"></div>
+                                        <div class="message__dashboard">
+                                            <div class="message_content_dash">
+                                                <p>Redeem giftcard</p>
+                                            </div>
+                                        </div><!--end of message-->
+                                   </a>
+                          </div>
                     </div>
                     <div class="main-content__box">
                          <h1 style="color:#000;">Transaction History</h1>
@@ -143,7 +139,7 @@
                                    </tr>
                               </tbody>
                          </table>
-                    </div>
+                     </div>
                </div>
          </div>
      </div>

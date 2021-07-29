@@ -4,9 +4,13 @@
 @section('title' , 'Login')
 
 @section('content')
-
 <div class="Auth_container">
     <h2>Login</h2>
+    @if(Session::get('fail'))
+      <div class="alert-alert-__fail">
+          {{ Session::get('fail') }}
+       </div>
+    @endif
     <form action="{{ route('Auth.logged') }}" method="post">
            @csrf
            <div class="form-Control">
@@ -15,7 +19,7 @@
                 type="text" 
                 name="email" 
                 id="Email" 
-                value="{{ old('name') }}"
+                value="{{ old('email') }}"
                 placeholder="Fadaka_example@gmail.com">
                 @error('email')
                      <div class="error">{{ $message }}</div>
@@ -28,7 +32,6 @@
                     type="password" 
                     name="password" 
                     id="pass" 
-                    value="{{ old('name') }}"
                     placeholder="Password">
                     @error('password')
                         <div class="error">Password cannot be empty</div>
@@ -45,6 +48,5 @@
                </div>
            </div>
     </form>
-</div>
-     
+</div> 
 @endsection

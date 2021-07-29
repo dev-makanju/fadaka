@@ -34,6 +34,19 @@ h1 , h2 , h3 , h4 , h5 , h6{
     padding: 0px;
 }
 
+.logout{
+    color: red;
+}
+
+.alert-alert-__fail{
+    background: #e74e3c;
+    color: $white;
+    text-align: center;
+    margin:0 auto;
+    padding: 10px;
+    border-radius: 5px;
+}
+
 ol , ul  , li , a{
     list-style-type: none;
     color: #000;

@@ -10,11 +10,7 @@
 
      @if(Session::get('fail'))
           <div class="alert-alert-__fail">
-              {{ Session::get('failposition: absolute;
-              right: 0px;
-              top: 0px;
-              padding: 8px;
-              font-size:20px') }}
+              {{ Session::get('success') }}
           </div>
      @endif
      <form action="{{ route('save.user') }}" method="post">
@@ -57,10 +53,10 @@
                 @enderror
             </div>
             <div class="form-Control">
-                <label for="pass_conf">Confirm password:</label>
+                <label for="password_confirmation">Confirm password:</label>
                 <input 
                     type="password" 
-                    name="pass_conf" 
+                    name="password_confirmation" 
                     id="pass_conf"
                     placeholder="Confirm Your password">
                 @error('pass_conf')
