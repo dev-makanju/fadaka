@@ -59,7 +59,7 @@ class TransactionController extends Controller
                  $result = $bal + $paymentDetails['data']['amount'];
                  //update wallet table
                  $bal = DB::table('wallets')->where('users_id' , session('LoggedUser'))->update(['balance'=>$result]);
-                 return redirect('/getfund')->withSuccessMessage('Holla!!! , Transaction Successfully', $paymentDetails['data']['channel'] , 'have been added to your wallet. , Thank you!!!');
+                 return redirect('/fund')->withSuccessMessage('Holla!!! , Transaction Successfully', $paymentDetails['data']['channel'] , 'have been added to your wallet. , Thank you!!!');
             }else{
                  return back()->with('fail' , 'Your transaction was successful, kindly try again later');
             }
