@@ -17,11 +17,21 @@ $light_green: rgb(15, 221, 15);
     font-family: 'Arvo', serif;
 }
 
+html{
+    height: 100%;
+}
+
+body{
+    overflow-y: auto;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    position: relative;
+    min-height: 100%;
+}
 
 @mixin fonts_bg {
     font-family: 'Old Standard TT', serif;
 }
-
 
 h1 , h2 , h3 , h4 , h5 , h6{
     color: #fff;
@@ -62,6 +72,14 @@ table{
     width: fit-content;
 }
 
+@mixin font-style {
+    font-family: 'raleways' sans-serif;
+}
+
+@mixin transition-ease {
+    transition: 0.5s all ease-in-out;
+}
+
 th{
     padding: 6px 40px;
     border: 1px solid #eee;
@@ -84,46 +102,3 @@ td:first-child{
     width: 5px;
 }
 
-
-
-@mixin font-style {
-    font-family: 'raleways' sans-serif;
-}
-
-@mixin transition-ease {
-    transition: 0.5s all ease-in-out;
-}
-
-@mixin desktop-md {
-     @media screen and (max-width:1200px){
-        
-     }
-}
-
-@mixin tablet-xd {
-    @media screen and (max-width:1024px){
-        
-    }
-}
-
-@mixin tablet-xl {
-    @media screen and (max-width:768px){
-        .Auth_container{
-            width: 80vw;
-            & h2{
-                font-size: 1rem;
-            }
-        }
-    }
-}
-
-@mixin tablet-xm {
-    @media screen and (max-width:450px){
-        .Auth_container{
-            width: 90vw;
-            & h2{
-                font-size: 1rem;
-            }
-        }
-    }
-}

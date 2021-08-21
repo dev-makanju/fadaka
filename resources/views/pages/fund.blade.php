@@ -6,34 +6,46 @@
     @include('layouts.sidenav')
     <div id="pages_right" class="column"">
         <div class="pages__main-content">
-           <h1 style="color:#000;">Fund wallet</h1>
+           <div class="error_message">
+               Transaction Failed
+           </div>
            <div class="message">
                <div class="top-box"></div>
-               <div class="message_content">
-                   <form action="" method="">   
-                       @csrf    
+               <div class="messge_content">
+                   <form method="POST" action="{{ route('pay') }}"  accept-charset="UTF-8" class="form-horizontal" role="form">   
                        <div class="form-group">
-                            <input type="text" placeholder="1234 1234 1234 1234"> 
-                            <div class="error">
-                                  input feild is required
-                            </div>
+                            <input type="hidden" name="email" placeholder="1234 1234 1234 1234" value="makurseme@gmail.com"> <!--(( required }}-->
+                            
                        </div>
                        <div class="form-group">
-                           <div class="split__form">
-                                <input type="text" placeholder="04/03"> 
-                                <input type="" placeholder="cvv">
-                           </div>
-                           <div class="error">
-                                input feild is required
-                            </div>
-                       </div>
-                       <div class="form-group">
-                            <input type="text" placeholder="$2000"> 
-                            <div class="error">
-                                input feild is required
-                            </div>
-                       </div>
-                       <button class="btn">send</button>
+                            <input type="hidden" name="orderID" placeholder="1234 1234 1234 1234" value="345"> 
+                            
+                        </div>
+                        <div class="form-group">
+                            <input type="hidden" name="amount" value="800000"> {{-- required in kobo --}}
+                            
+                        </div>
+                        <div class="form-group">
+                            <input type="hidden" name="quantity" value="1">
+                            
+                        </div>
+                        <div class="form-group">
+                            <input type="hidden" name="currency" value="NGN">
+                            
+                        </div>
+                        <div class="form-group">
+                            <input type="hidden" name="metadata" value="{{ json_encode($array = ['key_name' => 'value',]) }}" > {{-- For other necessary things you want to add to your payload. it is optional though --}}
+                            
+                        </div>
+                        <div class="form-group">
+                             <input type="hidden" name="reference" value="{{ Paystack::genTranxRef() }}"> {{-- required --}}
+                            
+                        </div>
+                        <div class="form-group">
+                            <input type="hidden" name="_token" value="{{ csrf_token() }}"> {{-- employ this in place of csrf_field only in laravel 5.0 --}}
+                            
+                        </div>
+                       <button class="btn" value="Pay Now!">Pay Now!</button>
                    </form>
                </div>
                <div class="message__wrapper">
@@ -42,6 +54,7 @@
            </div>
         </div>
    </div>
+
 </section> 
 
 @endsection

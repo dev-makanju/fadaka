@@ -1,5 +1,4 @@
 @extends('layouts.app')
-
 <!--include header page-->
 @section('title' , 'Login')
 
@@ -37,14 +36,15 @@
                         <div class="error">Password cannot be empty</div>
                     @enderror
            </div>
+            <div class="Auth__link-wrapper">
+                {!! NoCaptcha::renderJs() !!}
+                {!! NoCaptcha::display() !!}
+             </div>
 
            <button type="submit" class="btn">Submit</button>
            <div class="Auth__link">
                <div class="Auth__link-wrapper">
                    <p>Need an account? <a href="{{ route('Auth.register') }}">create account</a></p>
-               </div>
-               <div class="Auth__link-wrapper">
-                   <p>Verify That you are not a robot<a href="#">Recaptcher</a></p>
                </div>
            </div>
     </form>

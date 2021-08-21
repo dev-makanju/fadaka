@@ -5,27 +5,18 @@
 @import 'faq';
 @import 'about';
 @import'res_tab';
+@import'profile.scss';
 
-@include tablet-xm;
-@include tablet-xl;
-
-body{
-    overflow-y: auto;
-    overflow-x: hidden;
-    box-sizing: border-box;
-}
 
 .container{
     position: relative;
-    width: 100%;
-    height: 100vh;
+    height: 100%;
 
     &__background{
         position: absolute;
         top: 0px;
-        background: linear-gradient(to left , #000 , $secondary-color);
         width: 100%;
-        height: 100vh;
+        height: 550px;
         overflow: hidden;
     }
 
@@ -83,7 +74,7 @@ body{
         animation-delay: 2s;
     }
 
-    &:nth-child(4){
+     &:nth-child(4){
         left: 60%;
         width: 70px;
         height: 70px;
@@ -131,21 +122,39 @@ body{
 
 .link__landing__page{
     display: flex;
-    width: 100vw;
     justify-content: center;
     align-items: center;
 
     &__wrapper{
-        margin: 5px;
+        margin: 2px;
     }
 
     &__wrapper a{
-         color: #fff;
-         background: green;
-         padding: 10px 15px;
-         font-size: 24px;
+         color:green;
+         border:1px solid green;
          border-radius: 25px;
-         z-index: 1;
-         text-transform: uppercase;
+         padding: 4px;
     }
 }
+/*
+*profile pages
+*/
+.profile-pic{
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background-size: 50% 50%;
+}
+
+.core-features{
+      color: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 40px;
+      @include fonts_bg;
+}
+
+
+@include table-xl;
+@include table-xm;

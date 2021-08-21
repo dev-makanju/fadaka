@@ -5,38 +5,50 @@
     </div>
     <div class="side-navbar">
         <div class="side-navbar__balance">
-             <li>Wallet bal:</li><p><span class="cash">&pound</span>7000.00</p>
+             <li>Wallet bal:</li><p><span class="cash">NGN</span><?php returnUserBalanceById() ?></p>
         </div>
     </div>
     <ul class="sidebar">
          <li>
               <a href="{{ route('pages.dashboard') }}" class="active">
-                   <i class="fa fa-dashboard"></i>
+                   <i style="padding:7px;border-radius: 5px; background: green;" class="fa fa-dashboard"></i>
                    Dashboard
               </a>
          <li>
               <a href="{{ route('pages.mail') }}">
-                   <i class="fa fa-envelope"></i>
+                   <i style="padding:7px;border-radius: 5px; background: #e74e3c;" class="fa fa-envelope"></i>
                    Mail
               </a>
          </li>
          <li>
-              <a href="{{ route('pages.message') }}">
-                   <i class="fa fa-inbox"></i>
-                   Message    
+              <a href="{{ route('pages.withdraw') }}">
+                   <i style="padding:7px;border-radius: 5px; background: yellow;"class="fa fa-inbox"></i>
+                   Withdraw  
               </a>
          </li>
          <li>
               <a href="{{ route('pages.profile') }}">
-                   <i class="fa fa-user"></i>
+                   <i style="padding:7px;border-radius: 5px; background: orange;" class="fa fa-user"></i>
                    Profile
               </a>
          </li>
          <li>
               <a href="{{ route('pages.fund') }}">
-                   <i class="fa fa-dollar"></i>
-                   Fund wallet
+                   <i style="padding:7px;border-radius: 5px; background: green;" class="fa fa-dollar"></i>
+                   Top up Wallet
               </a>
          </li>
+          <li>
+              <a href="{{ route('pages.transact') }}">
+                   <i style="padding:7px;border-radius: 5px; background:purple;" class="fa fa-dollar"></i>
+               Transaction History
+               </a>
+          </li>
+          <li>
+               <a href="{{ route('pages.help') }}">
+                    <i style="padding:7px;border-radius: 5px; background: yellow;" class="fa fa-dollar"></i>
+                Help
+                </a>
+           </li>
     </ul>
 </div>

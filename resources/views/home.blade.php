@@ -8,26 +8,25 @@
          <div class="main-content">
                <div class="main-content__wrapper">
                     <div class="main-content__box">
-                         <div class="main-content__box__overlay">
-                         <img class="dashboard__display" height="250" alt="">
-                          <div class="main-content__box__text-display">
-                              <div>
-                                 <h2>
-                                    Your finances are secure...
-                                 </h2>
+                         <div class="slider-image">
+                              <div class="main-content__box__overlay">
+                                   <img  src="/media/bitcoin.jpg" alt="">
+                                   <div>
+                                        <h2> Your finances are secure..</h2>
+                                   </div>
                               </div>
-                              <div>
-                                   <h2>
-                                        Mobile Cashback
-                                   </h2>
+                              <div class="main-content__box__overlay">
+                                   <img  src="/media/wallet.jpg" alt="">
+                                   <div>
+                                        <h2>Get best services From Vtu providers</h2>
+                                   </div>
                               </div>
-                              <div>
-                                   <h2>
-                                        The best bank App in Town
-                                   </h2>
+                              <div class="main-content__box__overlay">
+                                   <img src="/media/internet.jpg" alt="">
+                                   <div>
+                                        <h2>Mobile Cashback</h2>
+                                   </div>
                               </div>
-                          </div>
-                              
                          </div>
                     </div>
                     <div class="main-content__box">
@@ -36,7 +35,7 @@
                                         <div class="top-dash__box"></div>
                                         <div class="message__dashboard">
                                             <div class="message_content_dash">
-                                                <p>Quick Transfer</p>
+                                                <a href="{{ route('pages.transfer') }}">Quick transfer</a>
                                             </div>
                                         </div><!--end of message-->
                                    </a>
@@ -103,43 +102,35 @@
                                    </a>
                           </div>
                     </div>
-                    <div class="main-content__box">
-                         <h1 style="color:#000;">Transaction History</h1>
-                         <div class="trow-exception">
-                              Oops!! , Nothing Found
-                         </div>
-                         <div class="main-search">
-                              <form action="">
-                                   <div class="search-bar">
-                                        <input type="text" placeholder="search-bar">
-                                        <i class="fa fa-search"></i>
-                                   </div>
-                                   <div class="search-bar">
-                                        <input type="text" placeholder="All Cartigory">
-                                        <select name="" id="">
-                                             <option value="">
-                                             </option>
-                                        </select>
-                                   </div>
-                              </form>
-                         </div>
-                         <table>
-                              <thead>
-                                   <th>s/n</th>
-                                   <th>History</th>
-                                   <th>All cartigories</th>
-                                   <th>Date</th>
-                              </thead>
-                              <tbody>
-                                   <tr>
-                                        <td>1</td>
-                                        <td>Transfer</td>
-                                        <td>Pos service</td>
-                                        <td>July 01 2020</td>
-                                   </tr>
-                              </tbody>
-                         </table>
-                     </div>
+                    <div class="currency__converter">
+                         <div class="currency__header">
+                         <h2> <i class="fa fa-convert">M</i> Convert</h2>      
+                         <form action="" method="post">
+                              <div class="currency__form">
+                               @csrf
+                              <label for="from">From</label>
+                              <input 
+                                   type="text"
+                                   placeholder="1.000"
+                                   name="from">
+                                   <select name="select">
+                                        <option value=""></option>
+                                   </select>
+
+                              <label for="from">To</label>
+                              <input 
+                                   type="text"
+                                   placeholder="1.000"
+                                   name="to">
+                              <select name="select">
+                                   <option value="">USD</option>
+                              </select>  
+                              <button class="currency__button">Convert</button> 
+                              </div>
+                         </div>          
+                         </form>
+                    </div>
+                    
                </div>
          </div>
      </div>
