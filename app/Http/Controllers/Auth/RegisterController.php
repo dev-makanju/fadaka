@@ -87,9 +87,6 @@ class RegisterController extends Controller
         }
     }
 
-    function fund(){
-        
-    }
     function logout(){
         if(session()->has('LoggedUser')){
             session()->pull('LoggedUser');
